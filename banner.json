@@ -1,0 +1,68 @@
+{
+  "repo": "picokit-29-lcd-menu-remote",
+  "eyebrow": "PICOKIT // LESSON 29",
+  "title": "PICOKIT // LCD MENU REMOTE",
+  "subtitle": "REMOTE MENU + AUTHENTICATED HEARTBEAT",
+  "accent": "#FFE000",
+  "dim": "#9E8A00",
+  "white": "#F3F2DB",
+  "cyan": "#7FD8E0",
+  "bg": "#110F00",
+  "bg_edge": "#050400",
+  "icon": "remote",
+  "panel_status": "MENU 2/3  ·  SET  ·  AEAD :ON",
+  "chips": [
+    {
+      "label": "REMOTE",
+      "value": "0x45"
+    },
+    {
+      "label": "ITEM",
+      "value": "2 / 3"
+    },
+    {
+      "label": "KEY",
+      "value": "argon2id"
+    },
+    {
+      "label": "RADIO",
+      "value": "-33 dBm"
+    }
+  ],
+  "terminal": [
+    "$ gateway listen /dev/cu.usbserial-A50285BI",
+    "[*] node 00029  seq 18  HEARTBEAT  AEAD ok",
+    "[*] anti-replay window ok  counter 18",
+    "[+] key 0x45  item 2 set  lcd render",
+    "[+] key 0x47  selected set  ack sent"
+  ],
+  "categories": [
+    "REMOTE",
+    "MENU",
+    "SECURE",
+    "LINK"
+  ],
+  "cards": [
+    {
+      "tag": "MN-01",
+      "label": "up 0x45",
+      "value": "next"
+    },
+    {
+      "tag": "MN-02",
+      "label": "down 0x46",
+      "value": "prev"
+    },
+    {
+      "tag": "MN-03",
+      "label": "ok 0x47",
+      "value": "select"
+    }
+  ],
+  "footer": [
+    "1 NODE  ·  1 GATEWAY  ·  2 WAY LORA  ·  NO PLAINTEXT",
+    "PICOKIT SERIES  ·  OUTPUT  ·  INPUT  ·  RADIO  ==[ MENU ]=="
+  ],
+  "layout": "stat",
+  "stat": "2/3"
+}
